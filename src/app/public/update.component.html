@@ -1,0 +1,42 @@
+<hr><div id="main-div" style="background-color: burlywood; padding:1%; width:90%;overflow:scroll;">
+  <h3 style="background-color: darkcyan;"><hr><b>Update User Details</b><hr></h3>
+  <h3 style="background-color: red;">{{err}}</h3>
+  <form autocomplete="off" ngNativeValidate (ngSubmit)="submitvalues()" enctype="multipart/form-data" method="POST">
+      Name :<input type="text" name="uname" [(ngModel)]="userdata.username" placeholder="UserName" ><br><br>
+      date of birth :<input type="date" name="udob" [(ngModel)]="userdata.dob" placeholder="yyyy-mm-dd" ><br><br>
+      Gender:<select name="ugender" [(ngModel)]="userdata.gender">
+          <option value="Male" >Male </option>
+          <option value="Female" >Female </option>
+      </select><br><br>
+      Email:<input type="email" name="uemail" [(ngModel)]="userdata.email" placeholder="Useremail" readonly><br><br>
+      Country:<select name="ucountry" [(ngModel)]="userdata.country">
+          <option value="India" >India </option>
+          <option value="America" >America </option>
+          <option value="Austrialia" >Austrialia </option>
+          <option value="England" >England </option>
+      </select>
+      State:<select name="ustate" [(ngModel)]="userdata.state">
+          <option value="Karnataka" >Karnataka </option>
+          <option value="Maharastra" >Maharastra </option>
+          <option value="tamil nadu" >tamil nadu</option>
+          <option value="Goa" >Goa </option>
+          <option value="kerala" >kerala</option>
+          <option value="Andra" >Andra</option>
+          <option value="Orissa" >Orissa</option>
+          <option value="Bihar" >Bihar </option>
+      </select><br><br>
+      District:<select name="udistrict" [(ngModel)]="userdata.district">
+          <option value="Bangaluru" >Bangaluru </option>
+          <option value="Tumkuru" >Tumkuru </option>
+          <option value="Mysore" >Mysore </option>
+          <option value="gadag" >gadag </option>
+      </select>
+      post:<input type="number" name="upin" [(ngModel)]="userdata.postal"><br><br>
+      Password<input type="password" name="upasswd" [(ngModel)]='userdata.password'>
+      Retype password<input type="password" name="urpasswd" [(ngModel)]="userdata.password"><br><br>
+      <!--Select profile picture<input type="file" name="upic" ng2FileSelect [uploader]="uploader"/>--><br><br>
+      <!--<input type="hidden" name="flg" ngvalue="1" [(ngModel)]="user.flg"><br><br>-->
+      <!--<button (click)="submitvalues()">Submit</button>-->
+      <input type="submit" name="submit" />
+  </form>
+</div>

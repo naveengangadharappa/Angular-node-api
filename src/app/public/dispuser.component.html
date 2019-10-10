@@ -1,0 +1,35 @@
+<hr><div class="navbar"><input type="text" name="username" [(ngModel)]="uname" placeholder="UserName"/><button (click)=" search()">Search</button></div>
+<table >
+  <thead >
+      <tr>
+          <th>Profile</th>
+          <th>User-Name</th>
+          <th>User-Gender</th>
+          <th>User-D-O-B</th>
+          <th>User-email</th>
+          <th>User-Address</th>
+          <th>Edit/delete</th>
+      </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let d of udata">
+     <td><a href="http://localhost:3000/pictures/{{d.email}}.jpg"><img src="http://localhost:3000/pictures/{{d.email}}.jpg" style="width:200px;height:100px;"></a><br>
+      <form ngNativeValidate enctype="multipart/form-data" method="POST">
+        <input
+      style="display:none"
+      type="file"
+      name="upic"
+      (change)="onFileSelected($event,d.email)"
+      #fileinput/>
+      <input style="display:none" type="text" name="email" [(ngModel)]="d.email">
+      <button type="submit" (click)="fileinput.click()">Select-Pic</button>
+      <!--<input style="width:30%" type="submit" value="upload">_--></form></td>
+     <td>{{d.username}}</td>
+     <td>{{d.gender}}</td>
+     <td>{{d.dob}}</td>
+     <td>{{d.email}}</td>
+     <td>{{d.country}}, {{d.state}}, {{d.district}}, {{d.postal}}</td>
+     <td> <button (click)="update(d)"><b>Edit</b></button><a (click)="delete(d.email)"><b>Delete</b></a></td>
+    </tr>
+</tbody>
+</table>

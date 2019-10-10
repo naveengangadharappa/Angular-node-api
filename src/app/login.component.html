@@ -1,0 +1,10 @@
+<h2>Welcome to My First Angular Application</h2><hr>
+<div>
+  <form autocomplete="off" (ngSubmit)="verifiy()" method="POST">
+  <h3>User Login</h3>
+  <h3>{{err}}</h3><br>
+  <input type="email" name="uemail" placeholder="Enter Email" ([ngModel])="user.uemail"><br>
+  <input type="password" name="upasswd" ([ngModel])="user.upasswd"><br>
+  <input type="submit" value="login">
+</form>
+</div>

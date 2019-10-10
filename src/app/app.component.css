@@ -1,0 +1,24 @@
+a{
+  background-color:darkolivegreen;
+  color:white;
+  padding:2%;
+  text-decoration-style: none;
+
+}
+a:hover{
+  background-color:cadetblue;
+}
+.navbar{
+  width:100%;
+  background-color:darkolivegreen;
+  padding-right:2%;
+  padding-top:2%;
+  padding-bottom:2%;
+}
+.text_box{
+  background-color:darkgray;
+  width:25%;
+  height:10%;
+  border: 2px solid #000044;
+  padding:3px;
+}

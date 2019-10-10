@@ -1,0 +1,14 @@
+<hr><button (click)="newgame()" class='stylebutton'>Start Game</button>
+<div class="maindiv">
+  <div> Gusses left   :  {{gusses}} </div><br>
+  <div>Incorrect Gusses Made :<span *ngFor="let letter of incorrectletterschoosen">{{letter}}</span> <br><br>
+  <div>Correct Gusses Made  : <span *ngFor="let letter of correctletterschoosen">{{letter}}</span><br><br>
+  <div> You have to guss this word : {{displayword}}</div><br>
+  <div>
+      Enter your gussing letter <input type="text" name="letter" [(ngModel)]="input.letter">
+      <button (click)="letterchoosen()">Submit</button>
+      <br><br>
+      <div> Hint : {{hintname}}</div><br>
+  </div>
+  <h2>{{msg}}</h2>
+</div>
